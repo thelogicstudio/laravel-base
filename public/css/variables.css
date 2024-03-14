@@ -1,0 +1,11 @@
+
+:root {
+    --primary-color: #861671;
+    --primary-color-light: #d3abc9;
+    --secondary-color: #7052f6;
+    --secondary-bg-color: #d0d0d0;
+    --btn-hover-color: #333333;
+    --light-font: #ffffff;
+    --font-stack: 'Montserrat', sans-serif;
+    --primary-border-color: #666666;
+}

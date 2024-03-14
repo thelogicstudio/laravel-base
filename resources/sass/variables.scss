@@ -1,0 +1,32 @@
+$spacer: 5px;
+
+$padding-1: 5px;
+$padding-2: 15px;
+$padding-3: 25px;
+$padding-4: 35px;
+$padding-5: 45px;
+
+$spacer-1: $spacer * 1;
+$spacer-2: $spacer * 2;
+$spacer-3: $spacer * 3;
+$spacer-4: $spacer * 5;
+$spacer-5: $spacer * 7;
+$font-stack: 'Montserrat', sans-serif;
+$primary-color: #861671;
+$secondary-color: #7052f6;
+$background: #eee;
+$primary-color-light: #d3abc9;
+$secondary-bg-color: #d0d0d0;
+$btn-hover-color: #333333;
+$light-font: #ffffff;
+$primary-border-color: #666666;
+
+$browser-context: 16;
+@function em($pixels, $context: $browser-context) {
+    @return #{$pixels/$context}em;
+}
+
+$transition-duration: 0ms;
+$transition-delay: $transition-duration;
+
+$sidebar-transition: $transition-duration opacity $transition-delay, $transition-duration visibility $transition-delay;

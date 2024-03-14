@@ -1,0 +1,139 @@
+.dataTables_wrapper table.data-table {
+    tr:not(.table-header):hover {
+        background: var(--bs-gray-400);
+    }
+
+    td {
+        position: relative;
+
+        .overlay-link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+    }
+
+    .select-checkbox {
+        max-width: 20px;
+        text-align: center;
+    }
+}
+
+.dataTables_paginate {
+    margin-top: 20px;
+}
+
+.dataTables_wrapper table.data-table.no-border, .dataTables_wrapper table.data-table-card.no-border {
+    border: none;
+    td {
+        padding: 0;
+    }
+    th, tr, td {
+        border: none;
+
+        &:hover {
+            background: none;
+        }
+    }
+}
+
+.data-table-card {
+    display: block;
+    border: none !important;
+
+    .card {
+        margin-bottom: 0;
+        border: none !important;
+    }
+    thead {
+        display: none;
+    }
+
+    tbody {
+        display: flex;
+        //justify-content: space-between;
+        flex-wrap: wrap;
+        //gap: 20px;
+        column-gap: 10px;
+        border: none !important;
+        background-color: inherit !important;
+
+        tr {
+            border: 1px solid #e6edef;
+            //border-radius: 5px;
+            display: block;
+            padding: 0;
+
+            td {
+                border: none !important;
+                //background: none !important;
+                border: 0 !important;
+                width: 100%;
+                height: 100%;
+                //display: block;
+                padding: 0;
+
+               // min-width: 100% !important;
+
+                .dt-card {
+                    cursor: pointer;
+                    transition: all 0.2s ease-in-out;
+                    border-radius: 5px;
+                    height: 100%;
+                    width: 100%;
+                    background: none;
+
+                    .card-body {
+                        background: none;
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+                        padding: 20px;
+
+                        .dt-img {
+                            margin-left: 10px;
+                            text-align: center;
+                            width: 100px;
+                            //max-height: 250px !important;
+                            margin-top: 1%;
+                            //border: 1px solid #ddd;
+                            border-radius: 4px;
+                            padding: 5px;
+
+                        }
+                        img.card-img-left {
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dataTables_length label{
+    display: flex;
+    align-items: center;
+    select{
+        width: 100px;
+    }
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current{
+    background: var(--primary-color) !important;
+    color: var(--light-font) !important;
+}
+
+body.dark-only table.dataTable tr:hover td {
+    background-color: transparent !important;
+}
+
+@media screen and (max-width: 640px){
+     .dataTables_wrapper .dataTables_filter{
+        float: right!important;
+         margin-top: 0!important;
+    }
+}

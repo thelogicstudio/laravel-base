@@ -1,0 +1,687 @@
+// Custom utility classes
+.p-1 {
+    padding: $padding-1 !important;
+}
+
+.p-2 {
+    padding: $padding-2 !important;
+}
+
+.p-3 {
+    padding: $padding-3 !important;
+}
+
+.p-4 {
+    padding: $padding-4 !important;
+}
+
+.p-5 {
+    padding: $padding-5 !important;
+}
+
+//left
+.pl-1 {
+    padding-left: $padding-1 !important;
+}
+
+.pl-2 {
+    padding-left: $padding-2 !important;
+}
+
+.pl-3 {
+    padding-left: $padding-3 !important;
+}
+
+.pl-4 {
+    padding-left: $padding-4 !important;
+}
+
+.pl-5 {
+    padding-left: $padding-5 !important;
+}
+
+//right
+.pr-1 {
+    padding-right: $padding-1 !important;
+}
+
+.pr-2 {
+    padding-right: $padding-2 !important;
+}
+
+.pr-3 {
+    padding-right: $padding-3 !important;
+}
+
+.pr-4 {
+    padding-right: $padding-4 !important;
+}
+
+.pr-5 {
+    padding-right: $padding-5 !important;
+}
+
+//top
+.pt-1 {
+    padding-top: $padding-1 !important;
+}
+
+.pt-2 {
+    padding-top: $padding-2 !important;
+}
+
+.pt-3 {
+    padding-top: $padding-3 !important;
+}
+
+.pt-4 {
+    padding-top: $padding-4 !important;
+}
+
+.pt-5 {
+    padding-top: $padding-5 !important;
+}
+
+//bottom
+.pb-1 {
+    padding-bottom: $padding-1 !important;
+}
+
+.pb-2 {
+    padding-bottom: $padding-2 !important;
+}
+
+.pb-3 {
+    padding-bottom: $padding-3 !important;
+}
+
+.pb-4 {
+    padding-bottom: $padding-4 !important;
+}
+
+.pb-5 {
+    padding-bottom: $padding-5 !important;
+}
+
+//left & right
+.px-1 {
+    padding-left: $padding-1 !important;
+    padding-right: $padding-1 !important;
+}
+
+.px-2 {
+    padding-left: $padding-2 !important;
+    padding-right: $padding-2 !important;
+}
+
+.px-3 {
+    padding-left: $padding-3 !important;
+    padding-right: $padding-3 !important;
+}
+
+.px-4 {
+    padding-left: $padding-4 !important;
+    padding-right: $padding-4 !important;
+}
+
+.px-5 {
+    padding-left: $padding-5 !important;
+    padding-right: $padding-5 !important;
+}
+
+//top & bottom
+.py-1 {
+    padding-top: $padding-1 !important;
+    padding-bottom: $padding-1 !important;
+}
+
+.py-2 {
+    padding-top: $padding-2 !important;
+    padding-bottom: $padding-2 !important;
+}
+
+.py-3 {
+    padding-top: $padding-3 !important;
+    padding-bottom: $padding-3 !important;
+}
+
+.py-4 {
+    padding-top: $padding-4 !important;
+    padding-bottom: $padding-4 !important;
+}
+
+.py-5 {
+    padding-top: $padding-5 !important;
+    padding-bottom: $padding-5 !important;
+}
+
+.m-1 {
+    margin: $spacer-1 !important;
+}
+
+.m-2 {
+    margin: $spacer-2 !important;
+}
+
+.m-3 {
+    margin: $spacer-3 !important;
+}
+
+.m-4 {
+    margin: $spacer-4 !important;
+}
+
+.m-5 {
+    margin: $spacer-5 !important;
+}
+
+//left
+.ml-1 {
+    margin-left: $spacer-1 !important;
+}
+
+.ml-2 {
+    margin-left: $spacer-2 !important;
+}
+
+.ml-3 {
+    margin-left: $spacer-3 !important;
+}
+
+.ml-4 {
+    margin-left: $spacer-4 !important;
+}
+
+.ml-5 {
+    margin-left: $spacer-5 !important;
+}
+
+//right
+.mr-1 {
+    margin-right: $spacer-1 !important;
+}
+
+.mr-2 {
+    margin-right: $spacer-2 !important;
+}
+
+.mr-3 {
+    margin-right: $spacer-3 !important;
+}
+
+.mr-4 {
+    margin-right: $spacer-4 !important;
+}
+
+.mr-5 {
+    margin-right: $spacer-5 !important;
+}
+
+//top
+.mt-1 {
+    margin-top: $spacer-1 !important;
+}
+
+.mt-2 {
+    margin-top: $spacer-2 !important;
+}
+
+.mt-3 {
+    margin-top: $spacer-3 !important;
+}
+
+.mt-4 {
+    margin-top: $spacer-4 !important;
+}
+
+.mt-5 {
+    margin-top: $spacer-5 !important;
+}
+
+//bottom
+.mb-1 {
+    margin-bottom: $spacer-1 !important;
+}
+
+.mb-2 {
+    margin-bottom: $spacer-2 !important;
+}
+
+.mb-3 {
+    margin-bottom: $spacer-3 !important;
+}
+
+.mb-4 {
+    margin-bottom: $spacer-4 !important;
+}
+
+.mb-5 {
+    margin-bottom: $spacer-5 !important;
+}
+
+//left & right
+.mx-1 {
+    margin-left: $spacer-1 !important;
+    margin-right: $spacer-1 !important;
+}
+
+.mx-2 {
+    margin-left: $spacer-2 !important;
+    margin-right: $spacer-2 !important;
+}
+
+.mx-3 {
+    margin-left: $spacer-3 !important;
+    margin-right: $spacer-3 !important;
+}
+
+.mx-4 {
+    margin-left: $spacer-4 !important;
+    margin-right: $spacer-4 !important;
+}
+
+.mx-5 {
+    margin-left: $spacer-5 !important;
+    margin-right: $spacer-5 !important;
+}
+
+//top & bottom
+.my-1 {
+    margin-top: $spacer-1 !important;
+    margin-bottom: $spacer-1 !important;
+}
+
+.my-2 {
+    margin-top: $spacer-2 !important;
+    margin-bottom: $spacer-2 !important;
+}
+
+.my-3 {
+    margin-top: $spacer-3 !important;
+    margin-bottom: $spacer-3 !important;
+}
+
+.my-4 {
+    margin-top: $spacer-4 !important;
+    margin-bottom: $spacer-4 !important;
+}
+
+.my-5 {
+    margin-top: $spacer-5 !important;
+    margin-bottom: $spacer-5 !important;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap');
+
+
+.wp-content {
+    margin-top: 60px;
+    margin-left: 75px;
+}
+/* Remove unde
+a:hover {
+  text-decoration: none;
+}
+/* Remove Bootstrap button outline */
+button, a {
+    .focus {
+        outline: 0;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+    &:focus {
+        outline: 0;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+}
+
+.toggle-sidebar{
+    display: none;
+}
+
+[data-component='sidebar'] {
+
+    .sidebar {
+        position: fixed;
+        z-index: 99;
+    }
+    //black menu
+    .first-menu {
+        position: fixed;
+        background-color: #ffffff;
+        height: 100%;
+        width: 65px;
+        top: 53px;
+        overflow: hidden;
+        border-top: 1px solid #e6edef !important;
+        border-right: 1px solid #e6edef !important;
+        transition: width .1s;
+        a {
+            color: #000000;
+            &:hover {
+            }
+        }
+        i {
+            font-size: 14px;
+            font-weight: 600;
+        }
+        span {
+            font-size: 0.9rem;
+            white-space: nowrap;
+            font-family: $font-stack;
+            opacity: 0;
+            visibility: hidden;
+            -webkit-transition: opacity 100ms, visibility 100ms;
+            transition: opacity 100ms, visibility 100ms;
+            font-weight: 600;
+
+        }
+        &:hover span {
+            opacity: 1;
+            visibility: visible;
+        }
+        .list-group-item {
+            border-radius: 0;
+            &:hover {
+                a{
+                    color: $primary-color !important;
+                    -webkit-transition: color 100ms linear;
+                    -ms-transition: color 100ms linear;
+                    transition: color 100ms linear;
+                }
+                span.first-menu-item{
+                    color: $primary-color !important;
+                    -webkit-transition: color 100ms linear;
+                    -ms-transition: color 100ms linear;
+                    transition: color 100ms linear;
+                }
+            }
+            a:hover{
+                color: $primary-color;
+                //background-color: $primary-color;
+            }
+        }
+    }
+    .first-menu:hover {
+        width: 200px;
+    }
+
+    .list-group-item {
+        font-size: 12px;
+        padding: 10px 0;
+    }
+
+    .submenu {
+        //position: fixed;
+        left: 160px;
+        width: 160px;
+        top: 56px;
+        //height: 100vw;
+        //opacity: 0;
+        //visibility: hidden;
+        transition: $sidebar-transition;
+        li a.second-menu-item span:hover{
+            color: $primary-color !important;
+            -webkit-transition: color 100ms linear;
+            -ms-transition: color 100ms linear;
+            transition: color 100ms linear;
+        }
+
+    }
+
+    .submenu li i{
+        margin-right: 10px;
+        background-color: white;
+        &:after {
+            margin-left: -3.5px!important;
+            color: #dadada;
+            font-size: 0.6rem;
+            font-family: 'FontAwesome';
+            content: "\f1db";
+        }
+    }
+
+    .submenu li i.active{
+        &:after {
+            color: $primary-color;
+        }
+    }
+
+    .submenu li i:before{
+        content:'';
+        position:absolute;
+        border-left:1px solid #dadada;
+        bottom: 8px;
+        z-index:-1;
+        height:33px;
+    }
+
+    .submenu li:first-child i:before{
+        height: 25px!important;
+    }
+
+    .submenu li:last-child i:before{
+        content:'' !important;
+    }
+    .submenu  li:last-child{
+        padding-bottom:0;
+    }
+
+    .submenu li span{
+        font-weight: normal;
+    }
+
+    .submenu li .active span{
+        font-weight: 600;
+    }
+
+    .submenu li i{
+        font-size: 7px;
+    }
+
+    .first-menu li:hover .submenu {
+        visibility: visible;
+        opacity: 1;
+        a{
+            color: #000000 !important;
+            font-size: 12px;
+        }
+    }
+
+    //.sub-submenu {
+    //    position: fixed;
+    //    background-color: #fff;
+    //    left: 355px;
+    //    top: 60px;
+    //    height: 100vw;
+    //    width: 195px;
+    //    opacity: 0;
+    //    visibility: hidden;
+    //    transition: $sidebar-transition;
+    //    a {
+    //        color: $primary-color;
+    //    }
+    //    .list-group-item:hover {
+    //        background-color: transparent;
+    //    }
+    //}
+    .submenu li:hover .sub-submenu {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .list-group-item {
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+    }
+
+    .arrow {
+        position: fixed;
+        left: 329px;
+        width: 0;
+        height: 0;
+        border-top: 27px solid transparent;
+        border-bottom: 27px solid transparent;
+
+        border-right: 27px solid white;
+        &:nth-child(3) {top: 20px;}
+    }
+}
+
+.sidebar .list-group .list-group-item[aria-expanded="false"] .submenu-icon::after {
+    content: " \f0d7";
+    font-family: 'FontAwesome';
+    text-align: right;
+    padding-left: 10px;
+    position: absolute;
+    right: 20px;
+}
+/* Opened submenu icon */
+.sidebar .list-group .list-group-item[aria-expanded="true"] .submenu-icon::after {
+    content: " \f0da";
+    font-family: 'FontAwesome';
+    display: inline;
+    text-align: right;
+    padding-left: 10px;
+    position: absolute;
+    right: 20px;
+}
+
+.first-menu:hover{
+    li a.second-menu-item i{
+       visibility: hidden!important;
+    }
+}
+
+.list-group{
+    border-radius: unset;
+}
+
+.list-group-item a .feather {
+    width: 14px;
+    height: 14px;
+}
+
+.list-group-item a span{
+    color: #000000 !important;
+    &:hover {
+
+    }
+}
+
+.list-group-item a.active{
+    color: $primary-color;
+    font-weight: 600;
+}
+
+.list-group-item a.active span{
+    color: $primary-color !important;
+}
+
+.submenu a.active{
+    color: $primary-color !important;
+}
+
+.first-menu-item{
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    &:hover{
+
+    }
+}
+
+body.dark-only .first-menu{
+    border-right: 1px solid #202938 !important;
+    background-color: #111727;
+    a {
+        color: #ffffff;
+        &:hover {
+        }
+    }
+    a.active{
+        color: $primary-color;
+    }
+}
+
+body.dark-only .submenu li i{
+    &:after {
+        background-color: #111727;
+    }
+}
+
+body.dark-only .list-group-item a span{
+    color: #ffffff !important;
+    &:hover {
+
+    }
+}
+
+body.dark-only .sub-submenu{
+    background-color: #111727 !important;
+}
+
+body.dark-only second-menu-item{
+    color: #ffffff !important;
+}
+
+body.dark-only .first-menu li:hover .submenu {
+    a{
+        color: #ffffff !important;
+    }
+}
+
+body.dark-only .list-group-item a.active span{
+    color: $primary-color !important;
+}
+
+body.dark-only .submenu a.active{
+    color: $primary-color !important;
+}
+
+@media screen and (max-width: 991px) {
+    .sidebar {
+        display: none;
+    }
+    .toggle-sidebar {
+        display: inline !important;
+    }
+    .first-menu{
+        width: 160px !important;
+    }
+    .first-menu span {
+        opacity: 1 !important;
+        visibility: visible !important;
+
+    }
+}
+
+@media screen and (max-width: 574px) {
+    [data-component=sidebar] {
+        .first-menu{
+            height: 100%;
+            span {
+                font-size: 0.9rem;
+                white-space: nowrap;
+                font-family: $font-stack;
+                opacity: 1;
+                visibility: visible ;
+                -webkit-transition: opacity 600ms, visibility 600ms;
+                transition: opacity 600ms, visibility 600ms;
+                font-weight: 600;
+
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .list-group-item{
+        padding-top: 10px !important;
+    }
+}
