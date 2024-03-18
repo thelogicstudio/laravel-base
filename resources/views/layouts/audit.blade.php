@@ -26,10 +26,10 @@
                                 <table class="table table-striped" >
                                     <thead class="thead-dark">
                                     <tr>
-                                        <th scope="col">Model</th>
+{{--                                        <th scope="col">Model</th>--}}
+                                        <th scope="col">Time</th>
                                         <th scope="col">Action</th>
                                         <th scope="col">User</th>
-                                        <th scope="col">Time</th>
                                         <th scope="col">Old Values</th>
                                         <th scope="col">New Values</th>
                                     </tr>
@@ -38,10 +38,10 @@
                                     @if(count($audits) > 0)
                                         @foreach($audits as $audit)
                                             <tr>
-                                                <td>{{ $audit->auditable_type }} (id: {{ $audit->auditable_id }})</td>
+                                                <td>{{ $audit->created_at }}</td>
+{{--                                                <td>{{ $audit->auditable_type }} (id: {{ $audit->auditable_id }})</td>--}}
                                                 <td>{{ $audit->event }}</td>
                                                 <td>{{ $audit->user->name }}</td>
-                                                <td>{{ $audit->created_at }}</td>
                                                 <td>
                                                     <table class="table">
                                                         @foreach($audit->old_values as $attribute => $value)
