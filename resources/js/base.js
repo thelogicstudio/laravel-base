@@ -60,3 +60,51 @@ $('#deleteItem').on('click', function (event) {
 $('.alert').delay(500).fadeIn(500, function() {
     $('.alert').delay(3000).fadeOut(500);
 });
+
+toggleEditMode();
+
+window.addEventListener('storage', function (event) {
+    if (event.key == 'editmode') {
+        $('#edit-mode-input').prop('checked', event.newValue === 'true');
+        toggleEditMode();
+    }
+});
+
+/* Toggle View/Edit mode */
+$('#edit-mode-input').on('change', function () {
+    let edit_mode = 0;
+    if ($(this).is(":checked")) {
+        edit_mode = 1;
+    }
+
+    localStorage.editmode = !!edit_mode;
+
+    setCookie('editmode', !!edit_mode, 365);
+
+    toggleEditMode();
+});
+
+function setCookie(name,value,days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+
+function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
+function toggleEditMode() {
+    let editModeCookie = getCookie('editmode');
+    if(editModeCookie && editModeCookie.length) {
+        $('#edit-mode-input').prop('checked', true);
+    } else {
+        $('#edit-mode-input').prop('checked', false);
+    }
+}
