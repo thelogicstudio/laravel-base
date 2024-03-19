@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\DB;
 use Yajra\DataTables\Facades\DataTables;
 
 class RoleController extends BaseController
@@ -63,6 +64,42 @@ class RoleController extends BaseController
             }
         }
         return redirect()->route('roles.show',['role' => $insert_id])->with('success', 'Resource saved successfully.');
+    }
+
+    public function update($id) {
+        $keys = array_keys(request()->all());
+        $data = $this->model::findOrFail($id);
+
+        $newRoles = [];
+        foreach ($keys as $key) {
+            if (method_exists($data, $key) && is_callable([$data, $key])) {
+                $newRoles = array_merge($newRoles, request($key));
+            }
+        }
+
+        // Retrieve all roles related to the role ID
+        $oldRoles = DB::table('privilege_role')->where('role_id', $id)->pluck('privilege_id')->toArray();
+        $oldRoles = array_map('intval', $oldRoles);
+
+        // Determine removed roles
+        $removedRoles = array_diff($oldRoles, $newRoles);
+
+        // Determine added roles
+        $addedRoles = array_diff($newRoles, $oldRoles);
+
+        // Fetch names of removed roles
+        $oldRolesArray = DB::table('privileges')->whereIn('id', $removedRoles)->pluck('name')->toArray();
+
+        // Fetch names of added roles
+        $newRolesArray = DB::table('privileges')->whereIn('id', $addedRoles)->pluck('name')->toArray();
+
+        // Record log if there are changes
+        if (!empty($oldRolesArray) || !empty($newRolesArray)) {
+            AuditController::recordLog($data, 'privileges updated', implode(', ', $oldRolesArray), implode(', ', $newRolesArray));
+        }
+
+        parent::update($id);
+        return redirect()->route('roles.show',['role' => $id])->with('success', 'Resource saved successfully.');
     }
 
     public function destroy($id) {
