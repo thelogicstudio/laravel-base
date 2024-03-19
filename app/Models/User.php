@@ -10,10 +10,11 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Cache;
 use OwenIt\Auditing\Contracts\Auditable;
+use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable implements Auditable
 {
-    use AuthorizesRequests, ValidatesRequests, HasFactory, Notifiable, SoftDeletes, \OwenIt\Auditing\Auditable;
+    use HasApiTokens, AuthorizesRequests, ValidatesRequests, HasFactory, Notifiable, SoftDeletes, \OwenIt\Auditing\Auditable;
 
     /**
      * The attributes that are mass assignable.
@@ -38,6 +39,10 @@ class User extends Authenticatable implements Auditable
         'remember_token',
     ];
 
+    public static $relatedtables = [];
+
+    public static $globalsearchavoid = [];
+
     /**
      * The attributes that should be cast.
      *
@@ -46,6 +51,11 @@ class User extends Authenticatable implements Auditable
     protected $casts = [
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
+    ];
+
+    public static $globalsearch = [
+        'name'  => 'Name',
+        'email' => 'Email'
     ];
 
     public static function createNewUser($input) {

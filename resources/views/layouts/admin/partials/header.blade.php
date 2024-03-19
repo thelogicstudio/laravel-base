@@ -7,20 +7,20 @@
     </div>
     <div class="left-menu-header col">
         <h6 class="title text-uppercase color-orange-800">{{config('constants.options.organisation')}}</h6>
-          <ul>
-            <li>
-              <form class="form-inline search-form global-search-form" id="global-search-form" onsubmit="return false;">
-                <div class="search-bg">
-                  <input type="text" class="form-control search-input global-search-input" placeholder="Search here....." autocomplete="off" id="global-search">
-                    <a class="btn btn-search global-search">
-                        <span id="global-search-span" class="spinner-border-sm" role="status" aria-hidden="true"> <i class="fa fa-search search-icon"></i></span> </a>
-                </div>
-              </form>
-              <span class="d-sm-none mobile-search search-bg"><i class="fa fa-search"></i></span>
-            </li>
-          </ul>
-        <div id="suggestion-box"></div>
+      <ul>
+        <li>
+          <form class="form-inline search-form global-search-form" id="global-search-form" onsubmit="return false;">
+            <div class="search-bg">
+              <input type="text" class="form-control search-input global-search-input" placeholder="Search here....." autocomplete="off" id="global-search">
+                <a class="btn btn-search global-search">
+                    <span id="global-search-span" class="spinner-border-sm" role="status" aria-hidden="true"> <i class="fa fa-search search-icon"></i></span> </a>
+            </div>
+          </form>
+          <span class="d-sm-none mobile-search search-bg"><i class="fa fa-search"></i></span>
+        </li>
+      </ul>
     </div>
+    <div id="suggestion-box"></div>
     <div class="nav-right col pull-right right-menu p-0">
       <ul class="nav-menus">
           <div class="resizer mr-3">

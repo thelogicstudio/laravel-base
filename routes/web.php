@@ -36,6 +36,10 @@ Route::middleware('auth')->group(function () {
     Route::get('roles/destroy/{id}', [RoleController::class, 'destroy'])->name('roles.destroy');
     Route::get('users/destroy/{id}', [UserController::class, 'destroy'])->name('users.destroy');
     Route::get('auditLog/{model}/{id}', [AuditController::class, 'auditLog'])->name('auditLog');
+
+    //Global Search
+    Route::post('/globalSearch', [UserController::class, 'globalSearch']);
+
 });
 
 require __DIR__.'/auth.php';

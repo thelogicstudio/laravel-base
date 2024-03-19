@@ -191,4 +191,74 @@
 
             return $data;
         }
+
+        function globalSearchQuery($controller, $select, $where = []) {
+            $relative_tables = [];
+            $related_fields = [];
+            $search_fields = [];
+            $selectArray = [];
+            foreach($select as $s) {
+                $selectArray[] = $controller->table . '.' . $s;
+            }
+            foreach($controller->model::$relatedtables as $key => $value){
+                $relative_tables[] = $key;
+                $related_fields[$key] = $key. '.' .$value['related_field'];
+                foreach($value['fields'] as $field){
+                    $selectArray[] = $key. '.' .$field;
+                    $search_fields[$key][] = $field;
+                }
+            }
+            $theQ = $controller->model::select($selectArray)->where(function ($query) use($controller){
+                    $query->where(function ($query)  use($controller){
+                        foreach ($controller->model::$globalsearch as $key => $field) {
+                            if(!in_array($key,$controller->model::$globalsearchavoid)){
+                                $query->orWhere($controller->table . '.' . $key, 'like', '%' . request('keyword') . '%');
+                            }
+                        }
+                    });
+                });
+            if(!empty($relative_tables)){
+                foreach($relative_tables as $table){
+                    $theQ->leftJoin($table,function($join) use($controller,$table, $related_fields) {
+                        $join->on($related_fields[$table],'=',$controller->table.'.id');
+                    })->orWhere(function ($query) use($controller, $search_fields, $table, $related_fields){
+                        $query->orWhere(function ($query)  use($controller, $search_fields, $table, $related_fields){
+                            foreach ($search_fields[$table] as $field) {
+                                $query->orWhere($table . '.' . $field, 'like', '%' . request('keyword') . '%');
+                            }
+                        });
+                    })->groupBy($related_fields[$table]);
+                }
+            }
+            if($where) {
+                foreach($where as $w) {
+                    $theQ->where($controller->table . '.' . $w['this'], $w['operator'], $w['that']);
+                }
+            }
+            return $theQ->distinct()->get();
+        }
+
+        public function globalSearch() {
+            if (!empty(request("keyword"))) {
+                echo '<ul id="search-results-list" class="card-body">';
+                /* Users */
+                $users = $this->globalSearchQuery(new UserController(), ['id', 'name', 'email'], '');
+                /* SExample line of using where
+                $users = $this->globalSearchQuery(new UserController(), ['name', 'email'], [0 => ['this' => '', 'operator' => '!=', 'that' => '']]);
+                */
+                $users = $users->sortBy('name')->values()->all();
+                if($users){
+                    echo '<li><ul><strong>Users</strong></ul>';
+                    foreach ($users as $user) {
+                        $viewUrl = route('users.show', $user->id);
+                        echo "<a href='".$viewUrl."'><li><i class='fa fa-user me-2'></i><span>" . $user->name . "</span></li></a>";
+                    }
+                    echo '</li>';
+                }
+                /* Todo add other searchable objects */
+                echo '</ul>';
+            }
+
+        }
+
     }

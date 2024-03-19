@@ -1,3 +1,8 @@
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
 
 $('.toggle-sidebar').on('click',function(){
     if( $('.sidebar').css('display') == 'none' ) {
@@ -108,3 +113,72 @@ function toggleEditMode() {
         $('#edit-mode-input').prop('checked', false);
     }
 }
+
+function globalSearch() {
+    globalSearchLoading(true);
+    if ($("#global-search").val() === "") {
+        $("#suggestion-box").addClass('d-none');
+    } else {
+        let value = $("#global-search").val();
+        setTimeout(function () {
+            $.ajax({
+                type: "POST",
+                url: "/globalSearch",
+                data: {
+                    keyword: value,
+                    "X-CSRF-TOKEN": "{{ csrf-token() }}"
+                },
+                beforeSend: function () {
+                    $('.search-icon').removeClass('fa-search');
+                    $('#global-search-span').addClass('spinner-border');
+                },
+                success: function (data) {
+                    console.log(data)
+                    globalSearchLoading(false);
+                    $("#suggestion-box").show().html(data);
+                    if ($("#search-results-list li").length == 0) {
+                        $("#suggestion-box").hide();
+                    }
+                    let maxHeight = window.innerHeight - 30 + "px";
+                    $("#suggestion-box").css("max-height", maxHeight);
+                },
+                complete: function() {
+                    $('#global-search-span').removeClass('spinner-border');
+                    $('.search-icon').addClass('fa-search');
+                }
+            });
+        }, 400);
+    }
+}
+
+function globalSearchLoading(active) {
+    if(active) {
+        $('#btnGlobal').html(`<i class="fa fa-spinner"></i>`);
+    } else {
+        $('#btnGlobal').html(`<i class="fa fa-search"></i>`);
+    }
+}
+
+$("#global-search").on('focus', function(){
+    if($("#global-search").val().length >= 2) {
+        globalSearch();
+    }
+});
+
+$('.global-search').on('click', function(){
+    if($("#global-search").val().length >= 3) {
+        globalSearch();
+    }
+});
+
+$('body').on('keydown', 'input, select, textarea', function(e) {
+    if (e.key === "Enter") {
+        if ($(e.target).hasClass('global-search-input')) {
+            e.preventDefault();
+            if ($("#global-search").val().length >= 2) {
+                globalSearch();
+            }
+            return false;
+        }
+    }
+});
