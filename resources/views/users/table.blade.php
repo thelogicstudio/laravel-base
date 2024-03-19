@@ -34,7 +34,7 @@
 <script type="text/javascript">
     $(function () {
         var table = $('#users-table').DataTable({
-            dom: 'flrtip',
+            dom: 'fBlrtip',
             processing: true,
             serverSide: true,
             pageLength: 50,
@@ -56,6 +56,9 @@
             oLanguage: {
                 sSearch: "Filter Entries:",
             },
+            buttons: [
+                'copy', 'csv', 'excel', 'pdf', 'print'
+            ]
         });
     });
 </script>
