@@ -160,7 +160,7 @@ function globalSearchLoading(active) {
 }
 
 $("#global-search").on('focus', function(){
-    if($("#global-search").val().length >= 2) {
+    if($("#global-search").val().length >= 3) {
         globalSearch();
     }
 });
@@ -175,7 +175,7 @@ $('body').on('keydown', 'input, select, textarea', function(e) {
     if (e.key === "Enter") {
         if ($(e.target).hasClass('global-search-input')) {
             e.preventDefault();
-            if ($("#global-search").val().length >= 2) {
+            if ($("#global-search").val().length >= 3) {
                 globalSearch();
             }
             return false;
