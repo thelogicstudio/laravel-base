@@ -17,7 +17,6 @@ $('.toggle-sidebar').on('click',function(){
 });
 
 $('.first-menu li').on('click', function (){
-    console.log('test')
     var submenu = $(this).children('ul');
     if (submenu.hasClass('d-none')) {
         submenu.removeClass('d-none'); //then show the current submenu

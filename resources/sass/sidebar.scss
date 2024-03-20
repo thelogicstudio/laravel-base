@@ -356,7 +356,7 @@ button, a {
         overflow: hidden;
         border-top: 1px solid #e6edef !important;
         border-right: 1px solid #e6edef !important;
-        transition: width .1s;
+        transition: width 0.5s;
         a {
             color: #000000;
             &:hover {
@@ -373,7 +373,7 @@ button, a {
             opacity: 0;
             visibility: hidden;
             -webkit-transition: opacity 100ms, visibility 100ms;
-            transition: opacity 100ms, visibility 100ms;
+            transition: opacity 500ms, visibility 500ms;
             font-weight: 600;
 
         }
@@ -551,7 +551,7 @@ button, a {
 
 .first-menu:hover{
     li a.second-menu-item i{
-       visibility: hidden!important;
+        visibility: hidden!important;
     }
 }
 
@@ -625,7 +625,7 @@ body.dark-only .sub-submenu{
     background-color: #111727 !important;
 }
 
-body.dark-only second-menu-item{
+body.dark-only .second-menu-item{
     color: #ffffff !important;
 }
 
