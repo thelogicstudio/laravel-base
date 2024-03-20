@@ -139,8 +139,6 @@ function globalSearch() {
                     if ($("#search-results-list li").length == 0) {
                         $("#suggestion-box").hide();
                     }
-                    let maxHeight = window.innerHeight - 30 + "px";
-                    $("#suggestion-box").css("max-height", maxHeight);
                 },
                 complete: function() {
                     $('#global-search-span').removeClass('spinner-border');
@@ -180,5 +178,12 @@ $('body').on('keydown', 'input, select, textarea', function(e) {
             }
             return false;
         }
+    }
+});
+
+document.body.addEventListener('click', function(e) {
+    let suggestionBox = document.getElementById('suggestion-box');
+    if(e.target.id !== suggestionBox && !suggestionBox.contains(e.target)) {
+        $('#suggestion-box').html('');
     }
 });

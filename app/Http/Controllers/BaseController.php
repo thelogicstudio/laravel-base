@@ -248,12 +248,12 @@
                 */
                 $users = $users->sortBy('name')->values()->all();
                 if($users){
-                    echo '<li><ul><strong>Users</strong></ul>';
+                    echo '<li class="group"><ul><strong>Users</strong>';
                     foreach ($users as $user) {
                         $viewUrl = route('users.show', $user->id);
                         echo "<a href='".$viewUrl."'><li><i class='fa fa-user me-2'></i><span>" . $user->name . "</span></li></a>";
                     }
-                    echo '</li>';
+                    echo '</ul></li>';
                 }
                 /* Todo add other searchable objects */
                 echo '</ul>';

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->dropColumn('id');
         });
         Schema::table('users', function (Blueprint $table) {
-            $table->increments('id')->unsigned()->unique();
+            $table->increments('id')->unsigned()->unique()->first();
         });
     }
 

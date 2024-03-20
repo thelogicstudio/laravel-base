@@ -38,6 +38,7 @@
             processing: true,
             serverSide: true,
             pageLength: 50,
+            lengthMenu: [[50, 100, 500, -1], [50, 100, 500, "All"]],
             ordering: true,
             bLengthChange: true,
             ajax: "{{ route('users.index') }}",

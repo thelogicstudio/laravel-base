@@ -2242,7 +2242,7 @@ table tbody .border-bottom-warning td {
     03.  Card CSS Start
 ==========================**/
 .card {
-  margin-bottom: 10px;
+  margin-bottom: 4rem;
   border: 1px solid #e6edef;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
