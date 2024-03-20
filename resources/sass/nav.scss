@@ -1,7 +1,7 @@
 #suggestion-box {
     position: absolute;
     left: 65px;
-    top: calc(100%);
+    top: 100%;
     background-color: rgb(241, 241, 241);
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     border-left: none;
@@ -10,6 +10,7 @@
     overflow-y: auto;
     border-top: none;
     z-index: 1;
+    max-height: 50vh;
     ul li {
         list-style: none;
         display: block;
@@ -24,9 +25,17 @@
             }
         }
 
+        .group ul{
+            font-size: 1.2rem;
+        }
+
         li {
             padding: 5px 20px;
-            color: #000;
+            font-size: 1rem;
+            color: var(--primary-color);
+        }
+        ul li:hover {
+            color: var(--primary-color-light);
         }
 
     }
