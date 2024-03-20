@@ -7,27 +7,32 @@
         @slot('breadcrumb_title')
             <h1>Roles</h1>
         @endslot
-        <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">
-                Home
-            </a></li>
-        <li class="breadcrumb-item"><a href="{{ route('roles.index') }}">Roles</a></li>
-        <li class="breadcrumb-item">Edit Role</li>
-
         @slot('page_options')
-            <div class="section-header-breadcrumb py-1  dropdown-basic">
-                <a href="{{ route('roles.show',$role->id)}}" class="btn dropbtn btn-primary btn-round"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back</a>
+            <div class="row">
+                <div class="col-md-7 text-start">
+                    <h3>Role Details</h3>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="{{ route('dashboard') }}">Home</a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="{{ route('roles.index') }}">Roles</a></li>
+                        <li class="breadcrumb-item active">Edit</li>
+                    </ol>
+                </div>
+                <div class="col-md-5 my-2">
+                    <div class="section-header-breadcrumb py-1  dropdown-basic">
+                        <a href="{{ route('roles.show',$role->id)}}" class="btn dropbtn btn-primary btn-round"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back</a>
+                    </div>
+                </div>
             </div>
         @endslot
     @endcomponent
     <section class="section">
-        <div class="content">
-{{--            @include('layouts.errors')--}}
-            <div class="section-body">
-                <div class="recordNavWrapper"></div>
-                <div class="row">
-                    <div class="col-lg-10">
-                        <div class="card card-warning">
-                            <div class="card-body ">
+        <div class="container-fluid">
+            <div class="row starter-main">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
                                 {{ html()->form('PATCH', route('roles.update', ['role' => $role->id]))->open() }}
                                     <div class="row">
                                         @include('roles.fields')

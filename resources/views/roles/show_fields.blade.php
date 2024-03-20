@@ -17,13 +17,13 @@ if (isset($role)) {
 
 <!-- Name Field -->
 <div class="form-group mb-4 mt-4">
-    <span class="mr-4"><span class="fw-bold small-caps">role name</span>: {{ $role->name }}
+    <span class="mr-4"><span class="fw-bold">Role Name</span>: {{ $role->name }}
 </div>
 
 <div class="form-group col-sm-12">
-    <h4 class="inner-h4">
-        <i class="fa fa-lock text-danger"> </i> Privileges
-    </h4>
+{{--    <h4 class="inner-h4">--}}
+{{--        <i class="fa fa-lock text-danger"> </i> Privileges--}}
+{{--    </h4>--}}
     @foreach ($grouped_privileges as $key => $privileges)
         <h5 class="inner-h5 pb-2">
             <i class="text-danger"> </i>{{ ucfirst($key) }}

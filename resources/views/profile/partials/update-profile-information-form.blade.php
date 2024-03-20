@@ -4,7 +4,7 @@
             {{ __('Profile Information') }}
         </h3>
 
-        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400 mb-3">
             {{ __("Update your account's name.") }}
         </p>
     </header>

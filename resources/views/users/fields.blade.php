@@ -15,9 +15,9 @@
 @endphp
 <div class="row">
     <div class="col-xl-8 col-12">
-        <h4 class="inner-h4">
-            <i class="fa fa-info text-danger"> </i> User Details
-        </h4>
+{{--        <h4 class="inner-h4">--}}
+{{--            <i class="fa fa-info text-danger"> </i> User Details--}}
+{{--        </h4>--}}
         <!-- Name Field -->
         <div class="form-group row">
             <div class="col-sm-6 col-md-6 col-xxl-3 col-12 mb-2">

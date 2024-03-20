@@ -7,25 +7,25 @@
         $user_role_name =  array_column($rolesArray, 'name');
     }
 @endphp
-<h4 class="inner-view-h4">
-    <i class="fa fa-info text-danger"> </i> User Details
-</h4>
+{{--<h4 class="inner-view-h4">--}}
+{{--    <i class="fa fa-info text-danger"> </i> User Details--}}
+{{--</h4>--}}
 <div class="row">
     <div class="col-xl-8 col-12">
         @if($user->name != '')
-            <p><span class="mr-4"><span class="fw-bold small-caps">name</span>: &nbsp;{{$user->name}}</span></p>
+            <p><span class="mr-4"><span class="fw-bold">Name</span>: &nbsp;{{$user->name}}</span></p>
         @endif
         @if($user->roles)
-            <p><span class="mr-4"><span class="fw-bold small-caps">type</span>: &nbsp;{{$user_role_name[0]}}</span></p>
+            <p><span class="mr-4"><span class="fw-bold">Type</span>: &nbsp;{{$user_role_name[0]}}</span></p>
         @endif
         @if($user->email != '')
-            <p><span class="mr-4"><span class="fw-bold small-caps">login&nbsp;email</span>:&nbsp;{{$user->email}}</span></p>
+            <p><span class="mr-4"><span class="fw-bold">Login&nbsp;Email</span>:&nbsp;{{$user->email}}</span></p>
         @endif
         @if($user->created_at != '')
-            <p><span class="mr-4"><span class="fw-bold small-caps">created at</span>:&nbsp;{{date('Y-m-d h:i', strtotime($user->created_at))}}</span></p>
+            <p><span class="mr-4"><span class="fw-bold">Created at</span>:&nbsp;{{date('Y-m-d h:i', strtotime($user->created_at))}}</span></p>
         @endif
         @if($user->updated_at != '')
-            <p><span class="mr-4"><span class="fw-bold small-caps">updated at</span>:&nbsp;{{date('Y-m-d h:i', strtotime($user->updated_at))}}</span></p>
+            <p><span class="mr-4"><span class="fw-bold">Updated at</span>:&nbsp;{{date('Y-m-d h:i', strtotime($user->updated_at))}}</span></p>
         @endif
     </div>
 </div>

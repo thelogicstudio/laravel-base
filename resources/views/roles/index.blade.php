@@ -21,13 +21,15 @@
         @endslot
     @endcomponent
     @include('layouts.admin.partials.flash-message')
-    <section class="section">
-        <div class="section-body">
-            <div class="card">
-                <div class="card-body">
-                    @include('roles.table')
+    <div class="container-fluid">
+        <div class="row starter-main">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        @include('roles.table')
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 @endsection

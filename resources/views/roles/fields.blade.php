@@ -22,9 +22,9 @@ if (isset($role)) {
 @endphp
 
 <div class="form-group col-sm-12">
-    <h4 class="inner-h4">
-        <i class="fa fa-unlock-alt text-danger"> </i> Privileges
-    </h4>
+{{--    <h4 class="inner-h4">--}}
+{{--        <i class="fa fa-unlock-alt text-danger"> </i> Privileges--}}
+{{--    </h4>--}}
     @foreach ($grouped_privileges as $key => $privileges)
         <h5 class="inner-h5 pb-2">
             <i class="text-danger"> </i>{{ ucfirst($key) }}

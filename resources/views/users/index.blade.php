@@ -33,12 +33,11 @@
             <div class="card">
                 <div class="card-body">
                     @include('users.table')
-
                 </div>
             </div>
         </div>
     </div>
-</div>
+  </div>
   @push('scripts')
   <script src="{{asset('assets/js/prism/prism.min.js')}}"></script>
   <script src="{{asset('assets/js/clipboard/clipboard.min.js')}}"></script>
