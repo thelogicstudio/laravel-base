@@ -39,6 +39,11 @@ class User extends Authenticatable implements Auditable
         'remember_token',
     ];
 
+    protected $auditExclude = [
+        'password',
+        'remember_token'
+    ];
+
     public static $relatedtables = [];
 
     public static $globalsearchavoid = [];
