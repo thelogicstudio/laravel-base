@@ -23,7 +23,7 @@
             </li> <!-- /.list-group-item -->
             @endcan
             <li class="list-group-item pl-3">
-                <a href="/profile" class="{{routeActive('profile.index')}}"><i data-feather="user"></i> <span class="ml-1 first-menu-item align-middle">My Profile</span></a>
+                <a href="/profile" class="{{routeActive('profile.edit')}}"><i data-feather="user"></i> <span class="ml-1 first-menu-item align-middle">My Profile</span></a>
             </li>
         </ul> <!-- /.first-menu -->
     </div> <!-- /.sidebar -->
