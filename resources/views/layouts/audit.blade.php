@@ -4,16 +4,21 @@
 @endsection
 @section('content')
     @component('components.breadcrumb')
-        @slot('breadcrumb_title')
-            <h1>Audit Log</h1>
-        @endslot
-        <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">
-                Home
-            </a></li>
-        <li class="breadcrumb-item">Audit Log</li>
-
         @slot('page_options')
+            <div class="row">
+                <div class="col-md-7 text-start my-2">
+                    <h3>Audit Log</h3>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="{{ route('dashboard') }}">Home</a>
+                        </li>
+                        <li class="breadcrumb-item active">Audit Log</li>
+                    </ol>
+                </div>
+                <div class="col-md-5 my-2">
 
+                </div>
+            </div>
         @endslot
     @endcomponent
     <section class="section">
