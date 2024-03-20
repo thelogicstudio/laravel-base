@@ -2,7 +2,7 @@
     <header>
         <h3 class="text-secondary">
             {{ __('Update Password') }}
-        </h2>
+        </h3>
 
         <p class="mt-1 text-sm text-gray-600 dark:text-gray-400 mb-3">
             {{ __('Ensure your account is using a long, random password to stay secure.') }}
