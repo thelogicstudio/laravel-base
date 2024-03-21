@@ -49,16 +49,15 @@
 
         <div class="flex items-center gap-4 mt-3">
             <button type="submit" class="btn btn-primary">Save</button>
-
-            @if (session('status') === 'profile-updated')
-                <p
-                    x-data="{ show: true }"
-                    x-show="show"
-                    x-transition
-                    x-init="setTimeout(() => show = false, 2000)"
-                    class="text-sm mt-2 text-green"
-                >{{ __('Saved.') }}</p>
-            @endif
+{{--            @if (session('status') === 'profile-updated')--}}
+{{--                <p--}}
+{{--                    x-data="{ show: true }"--}}
+{{--                    x-show="show"--}}
+{{--                    x-transition--}}
+{{--                    x-init="setTimeout(() => show = false, 2000)"--}}
+{{--                    class="text-sm mt-2 text-green"--}}
+{{--                >{{ __('Saved.') }}</p>--}}
+{{--            @endif--}}
         </div>
     </form>
 </section>

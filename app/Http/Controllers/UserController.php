@@ -39,9 +39,11 @@
                                      $viewUrl = route('users.show', $row->id);
                                      $editUrl = route('users.edit', $row->id);
                                      $deleteUrl = route('users.destroy', $row->id);
-                                     $actionBtn =   '<a href="'.$viewUrl.'" class="view btn btn-success btn-sm"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                                    <a href="'.$editUrl.'" class="edit btn btn-primary btn-sm"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                                    <a data-bs-toggle="modal" data-id="'.$row->id.'" data-link="'.$deleteUrl.'" data-bs-target="#deleteModal" title="Delete Role" href="#" class="item-delete btn btn-danger btn-sm"><i class="fa fa-trash-o" aria-hidden="true"></i></a>';
+                                     $actionBtn =   '<a href="'.$viewUrl.'" class="view btn btn-success btn-smmx-1"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                                    <a href="'.$editUrl.'" class="edit btn btn-primary btn-sm"><i class="fa fa-pencil" aria-hidden="true"></i></a>';
+                                     if($row->id != auth()->id()) {
+                                         $actionBtn .= '<a data-bs-toggle="modal" data-id="' . $row->id . '" data-link="' . $deleteUrl . '" data-bs-target="#deleteModal" title="Delete Role" href="#" class="item-delete btn btn-danger btn-sm mx-1"><i class="fa fa-trash-o" aria-hidden="true"></i></a>';
+                                     }
                                      return $actionBtn;
                                  })
                                  ->rawColumns(['action'])

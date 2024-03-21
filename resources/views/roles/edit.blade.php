@@ -27,6 +27,7 @@
             </div>
         @endslot
     @endcomponent
+    @include('layouts.admin.partials.flash-message')
     <section class="section">
         <div class="container-fluid">
             <div class="row starter-main">

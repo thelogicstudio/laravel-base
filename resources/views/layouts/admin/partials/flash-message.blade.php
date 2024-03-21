@@ -3,6 +3,11 @@
     {{ $message }}
 </div>
 @endif
+@if ($message = Session::get('status'))
+    <div class="alert alert-success alert-block">
+        Resource saved successfully.
+    </div>
+@endif
 @if ($message = Session::get('error'))
 <div class="alert alert-danger alert-block">
     {{ $message }}
