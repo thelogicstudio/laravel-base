@@ -1,6 +1,6 @@
 @extends('layouts.admin.master')
 @section('title')
-    Edit Contact
+    Edit User
 @endsection
 @section('content')
 @component('components.breadcrumb')

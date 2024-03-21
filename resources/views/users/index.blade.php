@@ -1,7 +1,7 @@
 @extends('layouts.admin.master')
 
 @section('title')
- Contacts
+ Users
 @endsection
 
 @push('css')

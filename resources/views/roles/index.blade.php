@@ -12,7 +12,7 @@
                 <div class="col-md-5 my-2">
                     @can('create', \App\Models\Role::class)
                         <div class="add-btn">
-                            <a href="{{ route('roles.create') }}" class="btn btn-secondary mt-1 form-btn">New Role<i
+                            <a href="{{ route('roles.create') }}" class="btn btn-secondary mt-1 form-btn">Role<i
                                     class="fa fa-plus ms-2"></i></a>
                         </div>
                     @endcan

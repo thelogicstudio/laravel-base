@@ -4,18 +4,23 @@
 @endsection
 @section('content')
     @component('components.breadcrumb')
-        @slot('breadcrumb_title')
-            <h1>Create New Role</h1>
-        @endslot
-        <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">
-                Home
-            </a></li>
-        <li class="breadcrumb-item"><a href="{{ route('roles.index') }}">Roles</a></li>
-        <li class="breadcrumb-item">Create New Role</li>
-
         @slot('page_options')
-            <div class="section-header-breadcrumb my-2 dropdown-basic">
-                <a href="{{ route('roles.index') }}" class="btn dropbtn btn-secondary btn-round"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back</a>
+            <div class="row">
+                <div class="col-md-7 text-start">
+                    <h3>Create Role</h3>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="{{ route('dashboard') }}">Home</a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="{{ route('users.index') }}">Roles</a></li>
+                        <li class="breadcrumb-item active">Create</li>
+                    </ol>
+                </div>
+                <div class="col-md-5 my-2">
+                    <div class="section-header-breadcrumb my-2 dropdown-basic">
+                        <a href="{{ route('roles.index') }}" class="btn dropbtn btn-secondary btn-round"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back</a>
+                    </div>
+                </div>
             </div>
         @endslot
     @endcomponent
