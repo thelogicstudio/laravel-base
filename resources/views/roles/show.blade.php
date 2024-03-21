@@ -1,16 +1,16 @@
 @extends('layouts.admin.master')
 @section('title')
-    Role Details
+    View Role
 @endsection
 @section('content')
     @component('components.breadcrumb')
         @slot('breadcrumb_title')
-            <h1>View  Role</h1>
+            <h1>View Role</h1>
         @endslot
         @slot('page_options')
             <div class="row">
                 <div class="col-md-7 text-start">
-                    <h3>Role Details</h3>
+                    <h3>View Role</h3>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
                             <a href="{{ route('dashboard') }}">Home</a>

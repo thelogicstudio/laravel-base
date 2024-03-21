@@ -145,6 +145,12 @@ body.dark-only .invisible-th th{
     white-space: nowrap;
 }
 
+.btn-table{
+    padding: 0.2rem!important;
+    width: 2rem;
+    margin-top: 0.1rem;
+}
+
 .table-image{
     text-align: center !important;
 }
@@ -366,11 +372,13 @@ body.dark-only .tt-selectable{
 
 .btn-search{
     border: 1px solid var(--primary-color);
+    border-bottom: none;
     background: var(--primary-color);
+    padding: 0.4rem 0.8rem!important;
     font-size: 12px!important;
     border-radius: 0!important;
-    border-top-right-radius: 0.5em 0.5em !important;
-    border-bottom-right-radius: 0.5em 0.5em !important;
+    border-top-right-radius: 0.7em 0.7em !important;
+    border-bottom-right-radius: 0.7em 0.7em !important;
 }
 
 .btn-search i{

@@ -7,7 +7,7 @@
         @slot('page_options')
             <div class="row">
                 <div class="col-md-7 text-start">
-                    <h3>User Details</h3>
+                    <h3>Edit User</h3>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
                             <a href="{{ route('dashboard') }}">Home</a>

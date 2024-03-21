@@ -12,7 +12,7 @@
   @component('components.breadcrumb')
     @slot('page_options')
         <div class="row">
-            <div class="col-md-7 text-start">
+            <div class="col-sm-7 text-start">
                 <h3>Users</h3>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">
@@ -21,7 +21,7 @@
                     <li class="breadcrumb-item active">Users</li>
                 </ol>
             </div>
-            <div class="col-md-5 my-2">
+            <div class="col-sm-5 my-2">
                 @can('create', \App\Models\User::class)
                     <div class="add-btn">
                         <a href="{{ route('users.create') }}" class="btn btn-secondary mt-1 form-btn">User <i

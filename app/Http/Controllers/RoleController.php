@@ -31,9 +31,9 @@ class RoleController extends BaseController
                                  $viewUrl = route('roles.show', $row->id);
                                  $editUrl = route('roles.edit', $row->id);
                                  $deleteUrl = route('roles.destroy', $row->id);
-                                 $actionBtn =   '<a href="'.$viewUrl.'" class="view btn btn-success btn-sm"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                                <a href="'.$editUrl.'" class="edit btn btn-primary btn-sm"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                                <a data-bs-toggle="modal" data-id="'.$row->id.'" data-link="'.$deleteUrl.'" data-bs-target="#deleteModal" title="Delete Role" href="#" class="item-delete btn btn-danger btn-sm"><i class="fa fa-trash-o" aria-hidden="true"></i></a>';
+                                 $actionBtn =   '<a href="'.$viewUrl.'" class="view btn btn-success btn-sm btn-table"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                                <a href="'.$editUrl.'" class="edit btn btn-primary btn-sm btn-table"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                                <a data-bs-toggle="modal" data-id="'.$row->id.'" data-link="'.$deleteUrl.'" data-bs-target="#deleteModal" title="Delete Role" href="#" class="item-delete btn btn-danger btn-sm btn-table"><i class="fa fa-trash-o" aria-hidden="true"></i></a>';
                                  return $actionBtn;
                              })
                              ->rawColumns(['action'])

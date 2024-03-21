@@ -16,7 +16,7 @@
                     <span id="global-search-span" class="spinner-border-sm" role="status" aria-hidden="true"> <i class="fa fa-search search-icon"></i></span> </a>
             </div>
           </form>
-          <span class="d-sm-none mobile-search search-bg"><i class="fa fa-search"></i></span>
+{{--          <span class="d-sm-none mobile-search search-bg"><i class="fa fa-search"></i></span>--}}
         </li>
       </ul>
     </div>

@@ -6,7 +6,7 @@
     @component('components.breadcrumb')
         @slot('page_options')
             <div class="row">
-                <div class="col-md-7 text-start">
+                <div class="col-sm-7 text-start">
                     <h3>Roles</h3>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
@@ -15,7 +15,7 @@
                         <li class="breadcrumb-item">Roles</li>
                     </ol>
                 </div>
-                <div class="col-md-5 my-2">
+                <div class="col-sm-5 my-2">
                     @can('create', \App\Models\Role::class)
                         <div class="add-btn">
                             <a href="{{ route('roles.create') }}" class="btn btn-secondary mt-1 form-btn">Role<i

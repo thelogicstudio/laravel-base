@@ -1,6 +1,6 @@
 @extends('layouts.admin.master')
 @section('title')
-  User Details
+    View User
 @endsection
 
 @section('content')
@@ -10,7 +10,7 @@
         @slot('page_options')
             <div class="row">
                 <div class="col-md-7 text-start">
-                    <h3>User Details</h3>
+                    <h3>View User</h3>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
                             <a href="{{ route('dashboard') }}">Home</a>

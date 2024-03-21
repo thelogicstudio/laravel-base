@@ -4,7 +4,7 @@
             <tr class="table-header">
                 <th>#</th>
                 <th>Name</th>
-                <th>Actions</th>
+                <th class="text-center">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -36,7 +36,10 @@
             },
             buttons: [
                 'copy', 'csv', 'excel', 'pdf', 'print'
-            ]
+            ],
+            columnDefs: [{
+                targets: [2], className: 'text-center'
+            }]
         });
     });
 </script>

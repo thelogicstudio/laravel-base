@@ -7,7 +7,7 @@
             <th>Type</th>
             <th>Email</th>
             <th>Created At</th>
-            <th></th>
+            <th class="text-center">Actions</th>
         </tr>
         </thead>
         <tbody>
@@ -59,7 +59,10 @@
             },
             buttons: [
                 'copy', 'csv', 'excel', 'pdf', 'print'
-            ]
+            ],
+            columnDefs: [{
+                targets: [5], className: 'text-center'
+            }]
         });
     });
 </script>
