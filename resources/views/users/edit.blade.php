@@ -18,10 +18,12 @@
                 </div>
                 <div class="col-md-5 my-2">
                     @can('delete', $user)
-                        <div class="section-header-breadcrumb py-1  dropdown-basic">
-                            <a class='btn btn-secondary item-delete' data-bs-toggle="modal" data-id="{{$user->id}}" data-link="/users/destroy/{{$user->id}}" data-bs-target="#deleteModal" title="Delete User" href="#">
-                                <i class="fa fa-trash-o"></i> Delete</a>
-                        </div>
+                        @if($user->id != auth()->id())
+                            <div class="section-header-breadcrumb py-1  dropdown-basic">
+                                <a class='btn btn-secondary item-delete' data-bs-toggle="modal" data-id="{{$user->id}}" data-link="/users/destroy/{{$user->id}}" data-bs-target="#deleteModal" title="Delete User" href="#">
+                                    <i class="fa fa-trash-o"></i> Delete</a>
+                            </div>
+                        @endif
                     @endcan
                     <div class="section-header-breadcrumb py-1  dropdown-basic">
                         <a href="{{ route('users.show',$user->id)}}" class="btn dropbtn btn-primary btn-round"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back</a>

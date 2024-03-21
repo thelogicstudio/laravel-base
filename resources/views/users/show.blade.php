@@ -21,10 +21,12 @@
                 </div>
                 <div class="col-md-5 my-2">
                         @can('delete', $user)
-                            <div class="section-header-breadcrumb py-1 mt-1 dropdown-basic">
-                                <a class='btn btn-danger item-delete' data-bs-toggle="modal" data-id="{{$user->id}}" data-link="/users/destroy/{{$user->id}}" data-bs-target="#deleteModal" title="Delete Contact" href="#">
-                                    <i class="fa fa-trash-o"></i> Delete</a>
-                            </div>
+                            @if($user->id != auth()->id())
+                                <div class="section-header-breadcrumb py-1 mt-1 dropdown-basic">
+                                    <a class='btn btn-danger item-delete' data-bs-toggle="modal" data-id="{{$user->id}}" data-link="/users/destroy/{{$user->id}}" data-bs-target="#deleteModal" title="Delete Contact" href="#">
+                                        <i class="fa fa-trash-o"></i> Delete</a>
+                                </div>
+                           @endif
                         @endcan
                         @can('update', $user)
                             <div class="section-header-breadcrumb py-1 mt-1 dropdown-basic">
