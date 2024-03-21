@@ -14,6 +14,12 @@
         <div class="row">
             <div class="col-md-7 text-start">
                 <h3>Users</h3>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="{{ route('dashboard') }}">Home</a>
+                    </li>
+                    <li class="breadcrumb-item active">Users</li>
+                </ol>
             </div>
             <div class="col-md-5 my-2">
                 @can('create', \App\Models\User::class)

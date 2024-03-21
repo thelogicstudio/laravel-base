@@ -8,6 +8,12 @@
             <div class="row">
                 <div class="col-md-7 text-start">
                     <h3>Roles</h3>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="{{ route('dashboard') }}">Home</a>
+                        </li>
+                        <li class="breadcrumb-item">Roles</li>
+                    </ol>
                 </div>
                 <div class="col-md-5 my-2">
                     @can('create', \App\Models\Role::class)
