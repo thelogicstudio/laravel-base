@@ -1,6 +1,6 @@
 @extends('layouts.admin.master')
 @section('title')
-    Dashboard
+    My Profile
 @endsection
 @section('content')
     @component('components.breadcrumb')
