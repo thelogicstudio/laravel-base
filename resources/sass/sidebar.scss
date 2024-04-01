@@ -375,7 +375,7 @@ button, a {
             -webkit-transition: opacity 100ms, visibility 100ms;
             transition: opacity 500ms, visibility 500ms;
             font-weight: 600;
-
+            margin-top: -3px;
         }
         &:hover span {
             opacity: 1;
