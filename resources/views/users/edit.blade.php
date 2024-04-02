@@ -26,7 +26,7 @@
                         @endif
                     @endcan
                     <div class="section-header-breadcrumb py-1  dropdown-basic">
-                        <a href="{{ route('users.show',$user->id)}}" class="btn dropbtn btn-primary btn-round"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back</a>
+                        <a href="{{ url()->previous()}}" class="btn dropbtn btn-primary btn-round"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back</a>
                     </div>
                 </div>
             </div>

@@ -20,9 +20,12 @@
                     </ol>
                 </div>
                 <div class="col-md-5 my-2">
-                    <div class="section-header-breadcrumb py-1  dropdown-basic">
+                    <div class="section-header-breadcrumb py-1 mt-1 dropdown-basic">
                         <a href="{{ route('roles.edit',$role->id) }}" class="btn dropbtn btn-secondary btn-round"> <i
                                 class="fa fa-edit"></i> Edit</a>
+                    </div>
+                    <div class="section-header-breadcrumb py-1 mt-1 dropdown-basic">
+                        <a href="{{ url()->previous()}}" class="btn dropbtn btn-primary btn-round"><i class="fa fa-chevron-left" aria-hidden="true"></i> Back</a>
                     </div>
                 </div>
             </div>

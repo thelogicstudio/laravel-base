@@ -7,9 +7,6 @@
         $user_role_name =  array_column($rolesArray, 'name');
     }
 @endphp
-{{--<h4 class="inner-view-h4">--}}
-{{--    <i class="fa fa-info text-danger"> </i> User Details--}}
-{{--</h4>--}}
 <div class="row">
     <div class="col-xl-8 col-12">
         @if($user->name != '')
@@ -28,10 +25,6 @@
             <p><span class="mr-4"><span class="fw-bold">Updated at</span>:&nbsp;{{date('Y-m-d h:i', strtotime($user->updated_at))}}</span></p>
         @endif
     </div>
-</div>
-<!-- Submit Field -->
-<div class="form-group col-sm-12 py-2 editOptions mt-5">
-    <a href="{{ route('users.index') }}" class="btn dropbtn btn-secondary btn-round">Back</a>
 </div>
 
 <div class="modal fade" id="addressToolModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

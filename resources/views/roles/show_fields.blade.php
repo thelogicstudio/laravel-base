@@ -53,7 +53,3 @@ if (isset($role)) {
         @endforeach
     @endforeach
 </div>
-<!-- Submit Field -->
-<div class="form-group col-sm-12 py-2 editOptions mt-5">
-    <a href="{{ route('roles.index') }}" class="btn dropbtn btn-secondary btn-round">Back</a>
-</div>
